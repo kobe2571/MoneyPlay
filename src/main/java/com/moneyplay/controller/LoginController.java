@@ -1,5 +1,7 @@
 package com.moneyplay.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +14,9 @@ import com.moneyplay.service.LoginService;
 @RequestMapping(value = "/login")
 public class LoginController
 {
-	LoginService loginService = new LoginService();
-	
-	@RequestMapping(value= "userLogin", method = RequestMethod.POST)
-	public String userLoginController(@RequestBody UserModel user)
+	@RequestMapping(value = "/userLogin", method = RequestMethod.POST)
+	public List<String> userLoginController(@RequestBody UserModel user)
 	{
-		return loginService.userLoginService(user);
+		return null;
 	}
 }

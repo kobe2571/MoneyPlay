@@ -1,28 +1,41 @@
 package com.moneyplay.model;
 
-public class UserModel 
+import java.io.Serializable;
+
+public class UserModel implements Serializable
 {
-	private String userName;
-	private String passWord;
+	private static final long serialVersionUID = 1L;
 	
-	public String getUserName() {
-		return userName;
+	private int id;
+	private String username;
+	private String password;
+	
+	public int getId() {
+		return id;
 	}
 	
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setId(int id) {
+		this.id = id;
 	}
-	
-	public String getPassWord() {
-		return passWord;
+
+	public String getUsername() {
+		return username;
 	}
-	
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
 	public String toString() {
-		return "UserModel [userName=" + userName + ", passWord=" + passWord + "]";
+		return "UserModel [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
 }
